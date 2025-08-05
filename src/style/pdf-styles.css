@@ -1,0 +1,104 @@
+/* PDF-friendly styles that avoid modern CSS color functions */
+.pdf-receipt {
+  /* Background colors */
+  --bg-white: #ffffff;
+  --bg-gray-50: #f9fafb;
+  --bg-gray-100: #f3f4f6;
+  --bg-gray-200: #e5e7eb;
+  --bg-gray-300: #d1d5db;
+  --bg-gray-600: #4b5563;
+  --bg-gray-700: #374151;
+  --bg-blue-600: #2563eb;
+  --bg-blue-700: #1d4ed8;
+  --bg-blue-900: #1e3a8a;
+  --bg-green-600: #16a34a;
+  --bg-green-700: #15803d;
+  --bg-red-600: #dc2626;
+
+  /* Text colors */
+  --text-gray-600: #4b5563;
+  --text-gray-700: #374151;
+  --text-gray-800: #1f2937;
+  --text-white: #ffffff;
+  --text-red-600: #dc2626;
+  --text-green-600: #16a34a;
+
+  /* Border colors */
+  --border-gray-200: #e5e7eb;
+  --border-gray-300: #d1d5db;
+  --border-red-500: #ef4444;
+  --border-black: #000000;
+}
+
+/* Apply traditional colors to PDF elements */
+.pdf-receipt .bg-white {
+  background-color: #ffffff !important;
+}
+.pdf-receipt .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+.pdf-receipt .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+.pdf-receipt .bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+.pdf-receipt .bg-gray-300 {
+  background-color: #d1d5db !important;
+}
+.pdf-receipt .bg-gray-600 {
+  background-color: #4b5563 !important;
+}
+.pdf-receipt .bg-gray-700 {
+  background-color: #374151 !important;
+}
+.pdf-receipt .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+.pdf-receipt .bg-blue-700 {
+  background-color: #1d4ed8 !important;
+}
+.pdf-receipt .bg-blue-900 {
+  background-color: #1e3a8a !important;
+}
+.pdf-receipt .bg-green-600 {
+  background-color: #16a34a !important;
+}
+.pdf-receipt .bg-green-700 {
+  background-color: #15803d !important;
+}
+.pdf-receipt .bg-red-600 {
+  background-color: #dc2626 !important;
+}
+
+.pdf-receipt .text-gray-600 {
+  color: #4b5563 !important;
+}
+.pdf-receipt .text-gray-700 {
+  color: #374151 !important;
+}
+.pdf-receipt .text-gray-800 {
+  color: #1f2937 !important;
+}
+.pdf-receipt .text-white {
+  color: #ffffff !important;
+}
+.pdf-receipt .text-red-600 {
+  color: #dc2626 !important;
+}
+.pdf-receipt .text-green-600 {
+  color: #16a34a !important;
+}
+
+.pdf-receipt .border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+.pdf-receipt .border-gray-300 {
+  border-color: #d1d5db !important;
+}
+.pdf-receipt .border-red-500 {
+  border-color: #ef4444 !important;
+}
+.pdf-receipt .border-black {
+  border-color: #000000 !important;
+}
