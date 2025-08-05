@@ -53,11 +53,11 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex flex-wrap space-x-2 mb-6">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+      <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
         <button
           onClick={() => setActiveTab("company")}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-3 sm:px-4 py-2 rounded-lg font-medium text-sm sm:text-base ${
             activeTab === "company"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 text-gray-700"
@@ -67,7 +67,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
         </button>
         <button
           onClick={() => setActiveTab("client")}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-3 sm:px-4 py-2 rounded-lg font-medium text-sm sm:text-base ${
             activeTab === "client"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 text-gray-700"
@@ -77,7 +77,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
         </button>
         <button
           onClick={() => setActiveTab("items")}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-3 sm:px-4 py-2 rounded-lg font-medium text-sm sm:text-base ${
             activeTab === "items"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 text-gray-700"
@@ -91,7 +91,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-4">Company Information</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Company Name
@@ -100,7 +100,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companyName}
                 onChange={(e) => updateField("companyName", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -112,7 +112,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companyArabic}
                 onChange={(e) => updateField("companyArabic", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -124,7 +124,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companySlogan}
                 onChange={(e) => updateField("companySlogan", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -136,7 +136,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companyReg}
                 onChange={(e) => updateField("companyReg", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -148,7 +148,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companyPhone}
                 onChange={(e) => updateField("companyPhone", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -160,7 +160,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="email"
                 value={receiptData.companyEmail}
                 onChange={(e) => updateField("companyEmail", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -172,7 +172,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.companyLocation}
                 onChange={(e) => updateField("companyLocation", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -184,7 +184,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.contactPerson}
                 onChange={(e) => updateField("contactPerson", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -196,7 +196,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.contactPhone}
                 onChange={(e) => updateField("contactPhone", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
           </div>
@@ -207,7 +207,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-4">Client Information</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Quotation Number
@@ -216,7 +216,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.quotationNo}
                 onChange={(e) => updateField("quotationNo", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -228,7 +228,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="date"
                 value={receiptData.date}
                 onChange={(e) => updateField("date", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -240,7 +240,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="date"
                 value={receiptData.validityDate}
                 onChange={(e) => updateField("validityDate", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -252,7 +252,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.clientName}
                 onChange={(e) => updateField("clientName", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -264,7 +264,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.clientTitle}
                 onChange={(e) => updateField("clientTitle", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -276,7 +276,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.clientCompany}
                 onChange={(e) => updateField("clientCompany", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
@@ -288,11 +288,11 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.clientLocation}
                 onChange={(e) => updateField("clientLocation", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
-            <div className="md:col-span-2">
+            <div className="lg:col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Subject
               </label>
@@ -300,7 +300,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 type="text"
                 value={receiptData.subject}
                 onChange={(e) => updateField("subject", e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
           </div>
@@ -309,11 +309,11 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
 
       {activeTab === "items" && (
         <div className="space-y-4">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <h3 className="text-lg font-semibold">Items</h3>
             <button
               onClick={addItem}
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+              className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base"
             >
               Add Item
             </button>
@@ -325,18 +325,18 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 key={index}
                 className="border border-gray-200 rounded-lg p-4"
               >
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
                   <h4 className="font-medium">Item {item.no}</h4>
                   <button
                     onClick={() => removeItem(index)}
-                    className="text-red-600 hover:text-red-800 font-medium"
+                    className="text-red-600 hover:text-red-800 font-medium text-sm"
                   >
                     Remove
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
-                  <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                  <div className="sm:col-span-2 lg:col-span-1">
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Description
                     </label>
@@ -346,7 +346,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                       onChange={(e) =>
                         updateItem(index, "description", e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
 
@@ -363,7 +363,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                         updateItem(index, "qty", newQty);
                         updateItem(index, "amount", newAmount);
                       }}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
 
@@ -377,7 +377,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                       onChange={(e) =>
                         updateItem(index, "unit", e.target.value)
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
 
@@ -396,7 +396,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                         updateItem(index, "amountPerUnit", newAmountPerUnit);
                         updateItem(index, "amount", newAmount);
                       }}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
 
@@ -415,7 +415,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                           parseFloat(e.target.value) || 0
                         )
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                 </div>
@@ -424,11 +424,11 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
 
             {/* Total Display */}
             <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
+                <span className="text-base sm:text-lg font-semibold text-gray-700">
                   Total Amount:
                 </span>
-                <span className="text-2xl font-bold text-green-600">
+                <span className="text-xl sm:text-2xl font-bold text-green-600">
                   {calculateTotal().toFixed(3)}
                 </span>
               </div>

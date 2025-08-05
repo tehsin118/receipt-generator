@@ -200,29 +200,29 @@ const ReceiptPage = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-gray-100 p-2 sm:p-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-800">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-4 sm:mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex-1">
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
                 Receipt Preview
               </h1>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Quotation: {receiptData.quotationNo}
               </p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto">
               <button
                 onClick={goBack}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="w-full sm:w-auto bg-gray-600 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 Back to Form
               </button>
               <button
                 onClick={exportToPDF}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 Download PDF
               </button>
@@ -235,7 +235,7 @@ const ReceiptPage = () => {
                     handlePrintFallback();
                   }
                 }}
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 Print
               </button>
@@ -249,7 +249,7 @@ const ReceiptPage = () => {
           ref={receiptRef}
         >
           <div
-            className="p-8 bg-white"
+            className="p-4 sm:p-8 bg-white"
             style={{
               width: "794px",
               minHeight: "1123px",
@@ -257,15 +257,15 @@ const ReceiptPage = () => {
             }}
           >
             {/* Company Header */}
-            <div className="flex justify-between items-start mb-6">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-start mb-6 gap-4">
               <div className="flex-1">
-                <h1 className="text-2xl font-bold text-blue-900 mb-1">
+                <h1 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
                   {receiptData.companyName}
                 </h1>
-                <p className="text-lg text-gray-700 mb-1">
+                <p className="text-base sm:text-lg text-gray-700 mb-1">
                   {receiptData.companyArabic}
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   {receiptData.companySlogan}
                 </p>
               </div>
@@ -273,7 +273,7 @@ const ReceiptPage = () => {
             </div>
 
             {/* Quotation Details */}
-            <div className="flex justify-between text-sm mb-4">
+            <div className="flex flex-col sm:flex-row justify-between text-xs sm:text-sm mb-4 gap-2">
               <div>Quotation No. {receiptData.quotationNo}</div>
               <div>Date {receiptData.date}</div>
               <div>Validity Date {receiptData.validityDate}</div>
@@ -282,7 +282,7 @@ const ReceiptPage = () => {
 
             {/* Client Information */}
             <div className="mb-6">
-              <div className="text-sm">
+              <div className="text-xs sm:text-sm">
                 <p>{receiptData.clientName}</p>
                 <p>{receiptData.clientTitle}</p>
                 <p>{receiptData.clientCompany}</p>
@@ -293,22 +293,22 @@ const ReceiptPage = () => {
 
             {/* Subject */}
             <div className="mb-4">
-              <p className="font-bold underline text-sm">
+              <p className="font-bold underline text-xs sm:text-sm">
                 SUB: {receiptData.subject}
               </p>
             </div>
 
             {/* Introduction */}
             <div className="mb-6">
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm">
                 We thank you for inviting us to quote for above job and are
                 pleased to submit our best price as follows
               </p>
             </div>
 
             {/* Items Table */}
-            <div className="mb-6">
-              <table className="w-full text-xs border-collapse">
+            <div className="mb-6 overflow-x-auto">
+              <table className="w-full text-xs border-collapse min-w-full">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="border border-gray-300 px-2 py-1 text-left">
@@ -360,16 +360,18 @@ const ReceiptPage = () => {
 
             {/* Total and Terms */}
             <div className="mb-6">
-              <p className="font-bold text-sm mb-2">
+              <p className="font-bold text-xs sm:text-sm mb-2">
                 Vat Not included in our price
               </p>
-              <p className="font-bold text-sm mb-2">PAYMENT TERMS:</p>
-              <p className="text-sm">Terms of Payment: As agreed</p>
+              <p className="font-bold text-xs sm:text-sm mb-2">
+                PAYMENT TERMS:
+              </p>
+              <p className="text-xs sm:text-sm">Terms of Payment: As agreed</p>
             </div>
 
             {/* Closing */}
             <div className="mb-6">
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm">
                 Assuring you of our best services at all times, we remain at
                 your service. If you require any further clarification, please
                 feel free to contact {receiptData.contactPerson} at{" "}
@@ -379,10 +381,10 @@ const ReceiptPage = () => {
 
             {/* Signature */}
             <div className="mb-6">
-              <p className="text-sm mb-2">Thanking you,</p>
-              <div className="flex items-end">
-                <div className="border-b-2 border-black w-32 mr-4"></div>
-                <div className="text-sm">
+              <p className="text-xs sm:text-sm mb-2">Thanking you,</p>
+              <div className="flex flex-col sm:flex-row items-end gap-4">
+                <div className="border-b-2 border-black w-32"></div>
+                <div className="text-xs sm:text-sm">
                   <p>Manager</p>
                   <p>FCMC, W. L. L</p>
                 </div>
