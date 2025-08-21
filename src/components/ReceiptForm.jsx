@@ -104,7 +104,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
               />
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Company Name (Arabic)
               </label>
@@ -114,7 +114,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 onChange={(e) => updateField("companyArabic", e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -232,7 +232,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
               />
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Validity Date
               </label>
@@ -242,7 +242,7 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
                 onChange={(e) => updateField("validityDate", e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">

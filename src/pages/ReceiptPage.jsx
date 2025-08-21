@@ -262,9 +262,9 @@ const ReceiptPage = () => {
                 <h1 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
                   {receiptData.companyName}
                 </h1>
-                <p className="text-base sm:text-lg text-gray-700 mb-1">
+                {/* <p className="text-base sm:text-lg text-gray-700 mb-1">
                   {receiptData.companyArabic}
-                </p>
+                </p> */}
                 <p className="text-xs sm:text-sm text-gray-600">
                   {receiptData.companySlogan}
                 </p>
@@ -276,7 +276,7 @@ const ReceiptPage = () => {
             <div className="flex flex-col sm:flex-row justify-between text-xs sm:text-sm mb-4 gap-2">
               <div>Quotation No. {receiptData.quotationNo}</div>
               <div>Date {receiptData.date}</div>
-              <div>Validity Date {receiptData.validityDate}</div>
+              {/* <div>Validity Date {receiptData.validityDate}</div> */}
             </div>
             <div className="border-b-2 border-red-500 mb-6"></div>
 

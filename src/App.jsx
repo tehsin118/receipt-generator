@@ -11,79 +11,25 @@ import ReceiptPage from "./pages/ReceiptPage";
 const FormPage = () => {
   const navigate = useNavigate();
   const [receiptData, setReceiptData] = useState({
-    quotationNo: "FCMC-163",
-    date: "2025-06-13",
-    validityDate: "2025-07-05",
-    clientName: "M/s. Abdul Majeed",
-    clientTitle: "General Manager",
-    clientCompany: "Sika Gulf",
+    quotationNo: "Breeze-001",
+    date: "",
+    validityDate: "",
+    clientName: "",
+    clientTitle: "",
+    clientCompany: "",
     clientLocation: "Kingdom of Bahrain",
-    subject:
-      "Plant DSU Unit.Split AC unit and Window A.C Quotation for servicing",
-    items: [
-      {
-        no: 1,
-        description: "Up to 3 TR Split A/C Units- normal service only.",
-        qty: 39,
-        unit: "Nos",
-        amountPerUnit: 15.0,
-        amount: 585.0,
-      },
-      {
-        no: 2,
-        description:
-          "Split A/C indoor unit- remove and pressure water service only.",
-        qty: 39,
-        unit: "Nos",
-        amountPerUnit: 10.0,
-        amount: 390.0,
-      },
-      {
-        no: 3,
-        description:
-          "Split A/C Outdoor unit - remove and preessure water service only.",
-        qty: 39,
-        unit: "Nos",
-        amountPerUnit: 10.0,
-        amount: 390.0,
-      },
-      {
-        no: 4,
-        description:
-          "Window A/C - Pressure water service and chemical service.",
-        qty: 8,
-        unit: "Nos",
-        amountPerUnit: 7.0,
-        amount: 56.0,
-      },
-      {
-        no: 5,
-        description:
-          "Split A/C indoor and outdoor unit- Remove and water service only",
-        qty: 39,
-        unit: "Nos",
-        amountPerUnit: 20.0,
-        amount: 780.0,
-      },
-      {
-        no: 6,
-        description: "5 TR Unit - indoor and outdoor unit water service only.",
-        qty: 12,
-        unit: "Nos",
-        amountPerUnit: 25.0,
-        amount: 300.0,
-      },
-    ],
-    contactPerson: "Mr. Ravinson",
-    contactPhone: "3652-6900",
-    companyName: "FIRST CARE MAINTENANCE CONTRACTING W.L.L",
-    companyArabic: "فيرست كير لمقاولات الصيانة ذ.م.م .",
+    subject: "",
+    items: [],
+    contactPerson: "Muhammad Babar",
+    contactPhone: "+973 6691 8612",
+    companyName: "Breeze Cool",
+    companyArabic: "",
     companySlogan:
       "(Approved environmental license contractor for air conditioning work)",
-    companyReg: "Cr No. 175386-1",
-    companyPhone: "39152628",
-    companyEmail: "fcmcontracting04@gmail.com",
-    companyLocation: "kingdom of Bahrain",
+    companyReg: "95770.3",
+    companyPhone: "+973 6691 8612",
+    companyEmail: "breezecool018@gmail.com",
+    companyLocation: "Kingdom of Bahrain",
   });
 
   const generateReceipt = () => {
