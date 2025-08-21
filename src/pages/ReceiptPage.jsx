@@ -100,9 +100,9 @@ const ReceiptPage = () => {
       });
 
       const imgData = canvas.toDataURL("image/png", 1.0); // Maximum quality
-      const pdf = new jsPDF("p", "mm", "a4");
-      const imgWidth = 210;
-      const imgHeight = 297;
+      const pdf = new jsPDF("p", "mm", "Legal");
+      const imgWidth = 216; // Legal width in mm
+      const imgHeight = 356; // Legal height in mm
 
       pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
       pdf.save(`quotation-${receiptData.quotationNo}.pdf`);

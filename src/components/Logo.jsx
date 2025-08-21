@@ -1,9 +1,9 @@
 import React from "react";
-
+import file from "../assets/icons/logo.jpg";
 const Logo = ({ size = "w-16 h-16", textSize = "text-xl" }) => {
   return (
     <div className="text-center logo-container">
-      <div
+      {/* <div
         className={`${size} bg-red-600 rounded-full flex items-center justify-center text-white font-bold ${textSize} mb-1`}
         style={{
           backgroundColor: "#dc2626",
@@ -27,7 +27,8 @@ const Logo = ({ size = "w-16 h-16", textSize = "text-xl" }) => {
         }}
       >
         FCMC
-      </p>
+      </p> */}
+      <img src={file} alt="" className="w-[64px] h-[56px]" />
     </div>
   );
 };
