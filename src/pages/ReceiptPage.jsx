@@ -383,7 +383,7 @@ const ReceiptPage = () => {
             <div className="mb-6">
               <p className="text-xs sm:text-sm mb-2">Thanking you,</p>
               <div className="flex flex-col sm:flex-row items-end gap-4">
-                <div className="border-b-2 border-black w-32"></div>
+                <div className="border-b-2 border-black w-32 mt-5"></div>
                 {/* <div className="text-xs sm:text-sm">
                   <p>Manager</p>
                   <p>FCMC, W. L. L</p>
