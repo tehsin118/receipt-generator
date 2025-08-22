@@ -30,6 +30,7 @@ const FormPage = () => {
     companyPhone: "+973 6691 8612",
     companyEmail: "breezecool018@gmail.com",
     companyLocation: "Kingdom of Bahrain",
+    totalAmount: "",
   });
 
   const generateReceipt = () => {

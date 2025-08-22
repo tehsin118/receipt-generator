@@ -199,6 +199,9 @@ const ReceiptPage = () => {
   if (!receiptData) {
     return <div>Loading...</div>;
   }
+
+  console.log("receiptData", receiptData);
+
   return (
     <div className="min-h-screen bg-gray-100 p-2 sm:p-4">
       <div className="max-w-4xl mx-auto">
@@ -347,10 +350,10 @@ const ReceiptPage = () => {
                         {item.unit}
                       </td>
                       <td className="border border-gray-300 px-2 py-1 text-center">
-                        {item.amountPerUnit.toFixed(3)}
+                        {item.amountPerUnit.toFixed(2)} BHD
                       </td>
                       <td className="border border-gray-300 px-2 py-1 text-center">
-                        {item.amount.toFixed(3)}
+                        {item.amount.toFixed(2)} BHD
                       </td>
                     </tr>
                   ))}
@@ -360,8 +363,9 @@ const ReceiptPage = () => {
 
             {/* Total and Terms */}
             <div className="mb-6">
-              <p className="font-bold text-xs sm:text-sm mb-2">
-                Vat Not included in our price
+              <p className="font-bold text-xs sm:text-sm mb-2 justify-between flex">
+                Total Amount
+                <span>{(receiptData?.totalAmount).toFixed(2)} BHD</span>
               </p>
               <p className="font-bold text-xs sm:text-sm mb-2">
                 PAYMENT TERMS:

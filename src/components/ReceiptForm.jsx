@@ -11,18 +11,22 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
   };
 
   const updateItem = (index, field, value) => {
-    setReceiptData((prev) => ({
-      ...prev,
-      items: prev.items.map((item, i) =>
+    setReceiptData((prev) => {
+      const newItems = prev.items.map((item, i) =>
         i === index ? { ...item, [field]: value } : item
-      ),
-    }));
+      );
+      const total = newItems.reduce((sum, item) => sum + item.amount, 0);
+      return {
+        ...prev,
+        items: newItems,
+        totalAmount: total,
+      };
+    });
   };
 
   const addItem = () => {
-    setReceiptData((prev) => ({
-      ...prev,
-      items: [
+    setReceiptData((prev) => {
+      const newItems = [
         ...prev.items,
         {
           no: prev.items.length + 1,
@@ -32,8 +36,14 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
           amountPerUnit: 0,
           amount: 0,
         },
-      ],
-    }));
+      ];
+      const total = newItems.reduce((sum, item) => sum + item.amount, 0);
+      return {
+        ...prev,
+        items: newItems,
+        totalAmount: total,
+      };
+    });
   };
 
   const calculateTotal = () => {
@@ -41,15 +51,20 @@ const ReceiptForm = ({ receiptData, setReceiptData }) => {
   };
 
   const removeItem = (index) => {
-    setReceiptData((prev) => ({
-      ...prev,
-      items: prev.items
+    setReceiptData((prev) => {
+      const newItems = prev.items
         .filter((_, i) => i !== index)
         .map((item, i) => ({
           ...item,
           no: i + 1,
-        })),
-    }));
+        }));
+      const total = newItems.reduce((sum, item) => sum + item.amount, 0);
+      return {
+        ...prev,
+        items: newItems,
+        totalAmount: total,
+      };
+    });
   };
 
   return (
